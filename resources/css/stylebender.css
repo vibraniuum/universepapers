@@ -1,0 +1,132 @@
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+
+:root {
+  --primary-color: #01573E;
+  --accent-color: #01573E;
+  --secondary-color: #000000;
+  --primary-100: #ccddd8;
+  --primary-200: #99bcb2;
+  --primary-300: #679a8b;
+  --primary-400: #347965;
+  --primary-500: #014632;
+  --primary-600: #013425;
+  --primary-700: #002319;
+  --primary-800: #00110c;
+  --accent-100: #ccddd8;
+  --accent-200: #99bcb2;
+  --accent-300: #679a8b;
+  --accent-400: #347965;
+  --accent-500: #014632;
+  --accent-600: #013425;
+  --accent-700: #002319;
+  --accent-800: #00110c;
+  --secondary-100: #cccccc;
+  --secondary-200: #999999;
+  --secondary-300: #666666;
+  --secondary-400: #333333;
+  --secondary-500: #000000;
+  --secondary-600: #000000;
+  --secondary-700: #000000;
+  --secondary-800: #000000;
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+:root {
+  color: #01573E;
+  font-family: Iosevka, sans-serif;
+  font-size: 16px;
+  background-color: #FBF8EE;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #212121;
+    color: #F5F4F4;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  button.primary, .button.primary {
+    background-color: #01573E;
+  }
+}
+
+button.primary, .button.primary {
+  background-color: #01573E;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  button.accent, .button.accent {
+    background-color: #01573E;
+  }
+}
+
+button.accent, .button.accent {
+  background-color: #01573E;
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :is(.button, button) {
+    color: #F5F4F4;
+    background: var(--secondary-700);
+  }
+}
+
+:is(.button, button) {
+  background: var(--secondary-100);
+  color: #01573E;
+  border-style: solid;
+  border-width: 0;
+  font-family: Iosevka, sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  border-radius: 0.35rem;
+  transition: filter 240ms ease-out;
+}
+
+:is(.button, button):hover {
+  filter: brightness(92%);
+}
+
+:is(button, .button) + :is(button, .button) {
+  margin-left: 0.75em;
+}
+
+:is(input, .input, select) {
+  -webkit-appearance: none;
+  border: 1px solid var(--secondary-200);
+  color: inherit;
+  background: transparent;
+  font-family: Iosevka, sans-serif;
+  padding: 0.5em 0.75em;
+  font-size: 0.9em;
+  border-radius: 0.35rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :is(input, .input, select) {
+    border: 1px solid var(--secondary-600);
+    color: inherit;
+    background: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 500;
+}
